@@ -3,6 +3,5 @@ Gunicorn
 numpy
 pandas
 nltk
-re
 pickle
 
