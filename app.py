@@ -69,6 +69,7 @@ def Predict():
 @app.route("/predict_all", methods=["POST"])
 def PredictAll():
     req_data = request.get_json(force=True)
+    print(req_data)
     sms_data_list = [text_cleaning(s["data"]).lower() for s in req_data]
     X = pd.Series(np.array(sms_data_list))
     result = model.predict(X)
